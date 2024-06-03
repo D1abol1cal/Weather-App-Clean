@@ -66,6 +66,183 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Karachi',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w300),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Good Morning',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Image.asset('assets/3.png'),
+                    const Center(
+                      child: Text(
+                        '32 °C',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 55,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    const Center(
+                      child: Text(
+                        'RAIN',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    const Center(
+                      child: Text(
+                        'Tuesday 4 - 04.41am',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/11.png',
+                              scale: 8,
+                            ),
+                            const SizedBox(width: 5),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Sunrise',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                ),
+                                SizedBox(height: 3),
+                                Text(
+                                  '6:00 am',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/12.png',
+                              scale: 8,
+                            ),
+                            const SizedBox(width: 5),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Sunset',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                ),
+                                SizedBox(height: 3),
+                                Text(
+                                  '6:00 pm',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/13.png',
+                              scale: 8,
+                            ),
+                            const SizedBox(width: 5),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Temp Max',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                ),
+                                SizedBox(height: 3),
+                                Text(
+                                  '43 °C',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/14.png',
+                              scale: 8,
+                            ),
+                            const SizedBox(width: 5),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Temp Min',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                ),
+                                SizedBox(height: 3),
+                                Text(
+                                  '34 °C',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
