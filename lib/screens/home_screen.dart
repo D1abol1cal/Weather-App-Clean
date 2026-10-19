@@ -14,7 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  @override
   Widget getWeatherIcon(int code) {
     switch (code) {
       case > 200 && < 300:
@@ -117,9 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 25,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: 'calibri',
-                                package: appFlavor),
+                                fontWeight: FontWeight.w400),
                           ),
                           getWeatherIcon(state.weather.weatherConditionCode!),
                           Center(
@@ -293,8 +290,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     );
+                  } else if (state is WeatherBlocFailure) {
+                    return const Center(
+                      child: Text(
+                        'Could not load the weather. Check your connection and API key, then try again.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    );
                   } else {
-                    return Container();
+                    return const Center(
+                      child: CircularProgressIndicator(color: Colors.white),
+                    );
                   }
                 },
               )
